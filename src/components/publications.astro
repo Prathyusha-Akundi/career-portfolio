@@ -1,0 +1,71 @@
+---
+import PublicationCard from './publication-card.astro';
+import publicationsData from '../data/publications.json';
+---
+
+<section id="publications" class="section-container overflow-hidden">
+  <div class="container mx-auto">
+    <div class="mb-16 publication-header">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
+        <span class="text-accent">/</span> Publications
+      </h2>
+      <p class="text-subtext font-body text-sm max-w-md">
+        Research papers, workshop contributions, and academic writing.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {publicationsData.map((publication) => (
+        <PublicationCard publication={publication} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .publication-header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .publication-header.reveal {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const initPublicationReveal = () => {
+    const header = document.querySelector('.publication-header');
+    const cards = document.querySelectorAll('.publication-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+
+          if (target.classList.contains('publication-header')) {
+            target.classList.add('reveal');
+            observer.unobserve(target);
+          } else if (target.classList.contains('publication-card')) {
+            const index = Array.from(cards).indexOf(target);
+            setTimeout(() => {
+              target.classList.add('reveal');
+            }, (index % 2) * 150);
+            observer.unobserve(target);
+          }
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -10px 0px'
+    });
+
+    if (header) observer.observe(header);
+    cards.forEach(card => observer.observe(card));
+  };
+
+  window.addEventListener('load', initPublicationReveal);
+  document.addEventListener('astro:after-swap', initPublicationReveal);
+</script>

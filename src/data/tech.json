@@ -1,35 +1,42 @@
 {
   "categories": [
     {
-      "title": "Mobile Development",
+      "title": "Core AI & Machine Learning",
       "skills": [
-        { "name": "Flutter", "level": 3, "icon": "skill-icons:flutter-dark" },
-        { "name": "Dart", "level": 3, "icon": "skill-icons:dart-dark" },
-        { "name": "Kotlin", "level": 1, "icon": "skill-icons:kotlin-dark" }
+        { "name": "Machine Learning", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "Deep Learning", "level": 3, "icon": "skill-icons:pytorch-dark" },
+        { "name": "Computer Vision", "level": 3, "icon": "skill-icons:opencv-dark" },
+        { "name": "NLP", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "Image Processing", "level": 3, "icon": "skill-icons:opencv-dark" }
       ]
     },
     {
-      "title": "Frontend",
+      "title": "Generative AI & Agents",
       "skills": [
-        { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "HTML", "level": 2, "icon": "skill-icons:html" },
-        { "name": "CSS", "level": 2, "icon": "skill-icons:css" },
-        { "name": "Tailwind CSS", "level": 1, "icon": "skill-icons:tailwindcss-dark" }
+        { "name": "Agentic AI", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "LLM Fine-tuning", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "Reinforcement Learning", "level": 2, "icon": "skill-icons:python-dark" },
+        { "name": "Evals & Alignment", "level": 2, "icon": "skill-icons:python-dark" },
+        { "name": "Knowledge Graphs", "level": 2, "icon": "skill-icons:python-dark" }
       ]
     },
     {
-      "title": "Backend",
+      "title": "Languages & Databases",
+      "skills": [
+        { "name": "Python", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "SQL", "level": 3, "icon": "skill-icons:postgresql-dark" },
+        { "name": "Cypher (Neo4j)", "level": 2, "icon": "skill-icons:python-dark" }
+      ]
+    },
+    {
+      "title": "Tools & Frameworks",
       "skills": [
         { "name": "FastAPI", "level": 2, "icon": "skill-icons:fastapi" },
-        { "name": "Python", "level": 2, "icon": "skill-icons:python-dark" },
-        { "name": "Firebase", "level": 3, "icon": "vscode-icons:file-type-firebase" }
-      ]
-    },
-    {
-      "title": "Database",
-      "skills": [
-        { "name": "SQLite", "level": 3, "icon": "skill-icons:sqlite" },
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" }
+        { "name": "Docker", "level": 2, "icon": "skill-icons:docker" },
+        { "name": "Streamlit", "level": 2, "icon": "skill-icons:python-dark" },
+        { "name": "LangGraph", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "ADK", "level": 3, "icon": "skill-icons:python-dark" },
+        { "name": "Smol Agents", "level": 3, "icon": "skill-icons:python-dark" }
       ]
     }
   ]

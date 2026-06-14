@@ -1,26 +1,26 @@
 [
   {
-    "company": "Demo Company",
-    "role": "Lead Software Engineer",
-    "period": "Oct 2025 - Present",
+    "company": "Perfios Software Solutions Pvt. Ltd.",
+    "role": "Senior Data Scientist",
+    "period": "Mar 2021 - Present",
     "type": "Full time job",
-    "description": "Leading cross-platform mobile development using Flutter and FastAPI. Focused on scalable system design and high-performance data processing.",
-    "skills": ["Leading", "Collaboration"]
+    "description": "Senior Data Scientist designing end-to-end agentic workflows focused on FinTech and Healthcare use cases. Experienced in LLM fine-tuning, agent orchestration, knowledge graph architecture, reinforcement learning, and evaluation frameworks—with growing focus on AI safety paradigms.",
+    "skills": ["GenAI", "Computer Vision", "Machine Learning", "Deep Learning", "Python", "SQL", "Reinforcement Learning"]
   },
   {
-    "company": "Demo Company",
-    "role": "Full-stack Developer",
-    "period": "Sep 2023 - Sep 2025",
+    "company": "Deloitte USI",
+    "role": "Business Technology Analyst",
+    "period": "Aug 2016 - Jun 2018",
     "type": "Full time job",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["React", "Node.js", "PostgreSQL", "Docker"]
+    "description": "Delivered insurance technology projects on the Guidewire suite (Policy Center, HPExstream, GOSU); 3 Applause and 4 Spot awards.",
+    "skills": ["Guidewire", "GOSU", "HPExstream", "Policy Center"]
   },
   {
-    "company": "Demo University of Tech",
-    "role": "BSc in Computer Science",
-    "period": "Jun 2020 - Jun 2024",
-    "type": "Student",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["C++", "OOP", "Problem Solving"]
+    "company": "Microsoft Corporation",
+    "role": "Intern - Software Engineer",
+    "period": "Jun 2015 - Aug 2015",
+    "type": "Internship",
+    "description": "Enhanced Course Publishing analytics using SQL. \n Developed 'ShareIt', a file sharing solution with Azure integration.",
+    "skills": ["SQL", "Azure"]
   }
 ]

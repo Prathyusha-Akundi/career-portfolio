@@ -1,0 +1,71 @@
+---
+import CertificationCard from './certification-card.astro';
+import certificationsData from '../data/certifications.json';
+---
+
+<section id="certifications" class="section-container overflow-hidden">
+  <div class="container mx-auto">
+    <div class="mb-16 certification-header">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
+        <span class="text-accent">/</span> Certifications
+      </h2>
+      <p class="text-subtext font-body text-sm max-w-md">
+        Credentials and professional certifications from leading platforms and institutions.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {certificationsData.map((certification) => (
+        <CertificationCard certification={certification} />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .certification-header {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .certification-header.reveal {
+    opacity: 1 !important;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  const initCertificationReveal = () => {
+    const header = document.querySelector('.certification-header');
+    const cards = document.querySelectorAll('.certification-card');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+
+          if (target.classList.contains('certification-header')) {
+            target.classList.add('reveal');
+            observer.unobserve(target);
+          } else if (target.classList.contains('certification-card')) {
+            const index = Array.from(cards).indexOf(target);
+            setTimeout(() => {
+              target.classList.add('reveal');
+            }, (index % 4) * 150);
+            observer.unobserve(target);
+          }
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -10px 0px'
+    });
+
+    if (header) observer.observe(header);
+    cards.forEach(card => observer.observe(card));
+  };
+
+  window.addEventListener('load', initCertificationReveal);
+  document.addEventListener('astro:after-swap', initCertificationReveal);
+</script>

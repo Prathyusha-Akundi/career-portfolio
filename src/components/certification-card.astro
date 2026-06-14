@@ -1,0 +1,65 @@
+---
+import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import { resolveAssetImage } from '../utils/images';
+
+const { certification } = Astro.props;
+
+const imgMetadata = await resolveAssetImage(certification.image);
+---
+
+<a
+  href={certification.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="certification-card group relative bg-accent/5 border border-accent/10 rounded-2xl overflow-hidden hover:border-accent/40 transition-all duration-500 flex flex-col"
+>
+  <!-- Preview image -->
+  <div class="relative aspect-[4/3] overflow-hidden bg-background/50">
+    <div class="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors z-10 pointer-events-none"></div>
+
+    {imgMetadata ? (
+      <Image
+        src={imgMetadata}
+        alt={`${certification.title} certificate preview`}
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+      />
+    ) : (
+      <div class="absolute inset-0 flex items-center justify-center bg-accent/5">
+        <Icon name="mdi:certificate-outline" class="w-16 h-16 text-accent/30" />
+      </div>
+    )}
+
+    <!-- External link badge -->
+    <div class="absolute top-3 right-3 z-20 p-1.5 bg-background backdrop-blur-md rounded-lg border border-accent/10 text-accent/75 group-hover:text-accent transition-colors">
+      <Icon name="mdi:open-in-new" class="w-4 h-4" />
+    </div>
+  </div>
+
+  <!-- Info -->
+  <div class="p-5 space-y-1">
+    <span class="text-accent text-[10px] uppercase tracking-widest font-bold">{certification.issuer} · {certification.year}</span>
+    <h3 class="text-base font-heading font-bold text-maintext leading-snug group-hover:text-accent transition-colors duration-300">
+      {certification.title}
+    </h3>
+  </div>
+</a>
+
+<style is:global>
+  .certification-card {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(40px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0.8s;
+    will-change: transform, opacity;
+  }
+
+  .certification-card.reveal {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+</style>

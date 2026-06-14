@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Reformulating Key-Information Extraction as Next Sentence Prediction for Hierarchical Data",
+    "summary": "Reformulating Key-Information Extraction for hierarchical tables as Next-Sentence Prediction to improve information extraction from complex documents.",
+    "venue": "International Conference on Document Analysis and Recognition",
+    "year": 2024,
+    "link": "https://link.springer.com/chapter/10.1007/978-3-031-70642-4_11"
+  },
+  {
+    "title": "Incremental Learning for a Flexible CAD System Design",
+    "summary": "Mitigating Catastrophic Forgetting through auxiliary task representations to enable incremental class learning in medical imaging systems.",
+    "venue": "International Symposium on Biomedical Imaging (ISBI)",
+    "year": 2022,
+    "link": "https://ieeexplore.ieee.org/document/9761688"
+  },
+  {
+    "title": "Manifold Learning to address Catastrophic Forgetting",
+    "summary": "Addressing Catastrophic Forgetting in medical CAD systems through manifold learning, enabling adaptation across sequential datasets from different imaging sources.",
+    "venue": "Indian Conference on Computer Vision, Graphics and Image Processing",
+    "year": 2021,
+    "link": "https://dl.acm.org/doi/10.1145/3490035.3490287"
+  },
+  {
+    "title": "A Clinically Inspired Approach for Melanoma classification",
+    "summary": "Improving melanoma detection in CAD systems through Intra-Patient Comparative Analysis to identify outlier lesions and boost diagnostic accuracy.",
+    "venue": "arXiv",
+    "year": 2021,
+    "link": "https://arxiv.org/abs/2106.08021"
+  }
+]
